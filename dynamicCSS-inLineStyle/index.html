@@ -14,10 +14,12 @@
 
 <body>
     <div id="app">
-        <p v-if="show">You can see me</p>
-        <p v-else> Now you see me</p>
-        <p>Can you see me too?</p>
-        <button @click="show=!show">Click me</button>
+        <div class="demo" v-bind:style="{backgroundColor:color}"></div>
+        <div class="demo" v-bind:style="myStyle"></div>
+        <div class="demo"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="width">
     </div>
 
     <script src="app.js"> </script>

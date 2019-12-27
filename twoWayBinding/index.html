@@ -14,10 +14,12 @@
 
 <body>
     <div id="app">
-        <p v-if="show">You can see me</p>
-        <p v-else> Now you see me</p>
-        <p>Can you see me too?</p>
-        <button @click="show=!show">Click me</button>
+        <label>Name</label>
+       <input type="text" v-model="name">
+       <span>{{name}}</span>
+       <label>Age</label>
+       <input type="text" v-model="age">
+       <span>{{age}}</span>
     </div>
 
     <script src="app.js"> </script>
