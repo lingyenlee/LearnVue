@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue JS</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- output a list dynamically -->
+        <ul>
+            <!-- v-for for looping -->
+            <!-- getting the current index using first the element (value) and then index -->
+            <!-- order is important -->
+            <!-- assigning the unique keys using each element -->
+            <li v-for='(ingredient,i)  in ingredients' v-bind:key="ingredient">{{ingredient}} ({{i}})
+            </li>
+        </ul>
+        <button @click="ingredients.push('spices')">Add New</button>
+        <!-- looping through objects -->
+        <hr>
+        <ul>
+            <li v-for='person in persons'>
+                <!-- using v-for to extract the key and value -->
+                <!-- add index as third argument -->
+                <div v-for="(value, key, index) in person">{{key}}: {{value}} ({{index}})<div>
+            </li>
+        </ul>
+        <!-- looping numbers -->
+        <span v-for="n in 10">{{n}} </span>
+
+        <hr>
+        <!-- rendering a group of elements using v-for mutiple non-nested elements -->
+        <template v-for="(ingredient, index) in ingredients">
+            <h1>{{ingredient}}</h1>
+            <p>{{index}}</p>
+        </template>
+
+    </div>
+    <script src="app.js"> </script>
+</body>
+
+</html>
