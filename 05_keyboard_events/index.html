@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyboard events</title>
+    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Keyboard events</h1>
+        <label>Name:</label>
+        <!-- add a modifier to keyboard event -->
+        <input type="text" v-on:keyup.enter="logName" />
+        <!-- chain modifier -->
+        <label>Age:</label>
+        <input type="text" v-on:keyup.alt.enter="logAge" />
+
+        <p>Read more at https://vuejs.org/v2/guide/events.html#Key-Modifiers</p>
+    </div>
+
+    <script src="app.js"> </script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue JS</title>
+    <title>Data Binding</title>
     <link href="styles.css" rel="stylesheet" />
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
 
@@ -13,13 +13,15 @@
 </head>
 
 <body>
-    <div id="app">
-        <label>Name</label>
-       <input type="text" v-model="name">
-       <span>{{name}}</span>
-       <label>Age</label>
-       <input type="text" v-model="age">
-       <span>{{age}}</span>
+    <h1>Data Binding</h1>
+    <div id="app1">
+        <!-- use v-bind to bind attributes -->
+        <a v-bind:href="website">Website</a>
+
+        <!-- <a :href= "website">Website</a> -->
+        <!-- can bind to other attributes -->
+        <input type="text" v-bind:value="name" />
+        <p v-html="websiteTag"></p>
     </div>
 
     <script src="app.js"> </script>

@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V for</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+</head>
+
+<div id="app">
+    <ul>
+        <li v-for="(character, index) in characters">
+            {{index}}: {{character}}
+        </li>
+    </ul>
+    <ul>
+        <li v-for="(ninja, index) in ninjas">{{index}}: {{ninja.name}} - {{ninja.age}}</li>
+    </ul>
+    <!-- no li tags -->
+    <template v-for="(ninja, index) in ninjas">
+        <p>{{index}}. {{ninja.name}}</p>
+        <p>{{ninja.age}}</p>
+    </template>
+
+
+    <template v-for="ninja in ninjas">
+        <div v-for="(val, key) in ninja">
+            <p>{{key}}: {{val}}</p>
+        </div>
+    </template>
+</div>
+<script src="app.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Modifiers</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+    <h1>Event Modifiers</h1>
+    <div id="app1">
+        <!-- use v-bind to bind attributes -->
+     <p>My age is {{age}}.</p>
+     <!-- directly in html -->
+     <!-- works only one time -->
+     <button v-on:click.once="age++">Add a year</button>
+     <button v-on:click="age--">Substract a year</button>
+
+     <!-- through methods - no need to add parathesis when attached to an event -->
+     <button v-on:click="add(1)">Add a year</button>
+     <button v-on:click="substract(1)">Substract a year</button>
+
+     <!-- double click events -->
+     <button v-on:dblclick="add(10)">Add 10 years</button>
+     <button v-on:dblclick="substract(10)">Substract 10 years</button>
+
+     <!-- prevent default to go to link -->
+     <a v-on:click.prevent="click" href="http://www.google.com">Google</a>
+
+    </div>
+
+    <script src="app.js"> </script>
+</body>
+
+</html>

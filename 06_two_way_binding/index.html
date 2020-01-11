@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Two way data binding</title>
+    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>two way data binding</h1>
+        <label>Name:</label>
+        <!-- use v-model for 2 way data binding to bind to variable name and output-->
+        <!-- instead of using keyup event and attach to a method -->
+        <input type="text" v-model="name" />
+        <p>{{name}}</p>
+        <!-- chain modifier -->
+        <label>Age:</label>
+        <input type="text" v-model="age" />
+        <p>{{age}}</p>
+    </div>
+
+    <script src="app.js"> </script>
+</body>
+
+</html>

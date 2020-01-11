@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Computed property</title>
+    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Computed Property</h1>
+       
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+        <p>{{a}} </p>
+        <p>{{b}}</p>
+        <p> Age + A = {{addtoA}}</p>
+        <p> Age + B = {{addtoB}}</p>
+
+    </div>
+
+    <script src="app.js"> </script>
+</body>
+
+</html>

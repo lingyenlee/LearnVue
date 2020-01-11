@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Binding</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+    <h1>Events</h1>
+    <div id="app1">
+        <!-- use v-bind to bind attributes -->
+     <p>My age is {{age}}.</p>
+     <!-- directly in html -->
+     <button v-on:click="age++">Add a year</button>
+     <button v-on:click="age--">Substract a year</button>
+
+     <!-- through methods - no need to add parathesis when attached to an event -->
+     <button v-on:click="add(1)">Add a year</button>
+     <button v-on:click="substract(1)">Substract a year</button>
+
+     <!-- double click events -->
+     <button v-on:dblclick="add(10)">Add 10 years</button>
+     <button v-on:dblclick="substract(10)">Substract 10 years</button>
+
+     <!-- mouse move event -->
+    <div id="canvas" @mousemove="updateXY" >
+
+        {{x}}, {{y}}
+    </div>
+
+    </div>
+
+    <script src="app.js"> </script>
+</body>
+
+</html>
